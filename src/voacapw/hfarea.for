@@ -123,8 +123,8 @@ c jw         end if
 c jw       end if
       if(iquiet.eq.0) then
          if(iy.eq.1) then
-             write(unit=*,fmt='(i3'' rows '')') ny !jw
-             write(unit=*,fmt='(''[''i4)', advance='no') iy !jw
+             write(unit=*,fmt='(i3, '' rows '')') ny !jw
+             write(unit=*,fmt='(''['', i4)', advance='no') iy !jw
          else
              write(unit=*,fmt='(i4)', advance='no') iy !jw
          end if

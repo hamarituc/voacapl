@@ -540,11 +540,11 @@ c**************************************************************
             go to 950
          else                    !  process next file in order
             if (fileNumCtr <= 9) then
-                write (filein,'(A11I1)') "voaareax.da", fileNumCtr
-                write (fileout, '(AI1)') fileout(1:index(fileout, '.vg')+2),fileNumCtr
+                write (filein,'(A11, I1)') "voaareax.da", fileNumCtr
+                write (fileout, '(A, I1)') fileout(1:index(fileout, '.vg')+2),fileNumCtr
             else
-                write (filein,'(A11I2)') "voaareax.da", fileNumCtr
-                write (fileout, '(AI2)') fileout(1:index(fileout, '.vg')+2),fileNumCtr
+                write (filein,'(A11, I2)') "voaareax.da", fileNumCtr
+                write (fileout, '(A, I2)') fileout(1:index(fileout, '.vg')+2),fileNumCtr
             endif
             filein = trim(filein)
             fileout = trim(fileout)

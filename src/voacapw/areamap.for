@@ -92,22 +92,22 @@ c          read COLOR & CITYNAME whether OLD or NEW format
       ! The following inputs have been modified to work with a larger
       ! number of area plots
       else if(card(1:10).eq.'Months   :') then
-         write (fmt_str, "(AI0A)") "(10x,", MAX_AREA_MONTHS,"f7.2)"
+         write (fmt_str, "(A,I0,A)") "(10x,", MAX_AREA_MONTHS,"f7.2)"
          read(card, fmt_str) montha
          do 305 i=1,MAX_AREA_MONTHS     !  fix old integer months (before MONTH.DAY)
            if(montha(i).gt.0. .and. montha(i).lt.1.) montha(i)=montha(i)*100.
 305      continue
       else if(card(1:10).eq.'Ssns     :') then
-         write (fmt_str, "(AI0A)") "(10x,", MAX_AREA_MONTHS,"I7)"
+         write (fmt_str, "(A,I0,A)") "(10x,", MAX_AREA_MONTHS,"I7)"
          read(card, fmt_str) ssna
       else if(card(1:10).eq.'Qindexs  :') then
-         write (fmt_str, "(AI0A)") "(10x,", MAX_AREA_MONTHS,"I7)"
+         write (fmt_str, "(A,I0,A)") "(10x,", MAX_AREA_MONTHS,"I7)"
          read(card,fmt_str) qindexa
       else if(card(1:10).eq.'Hours    :') then
-         write (fmt_str, "(AI0A)") "(10x,", MAX_AREA_MONTHS,"I7)"
+         write (fmt_str, "(A,I0,A)") "(10x,", MAX_AREA_MONTHS,"I7)"
          read(card, fmt_str) ihour
       else if(card(1:10).eq.'Freqs    :') then
-         write (fmt_str, "(AI0A)") "(10x,", MAX_AREA_MONTHS,"f7.3)"
+         write (fmt_str, "(A,I0,A)") "(10x,", MAX_AREA_MONTHS,"f7.3)"
          read(card, fmt_str) Freq
       else if(card(1:10).eq.'System   :') then
          if(model.eq.'ICEPAC' .or. model.eq.'VOACAP') then
